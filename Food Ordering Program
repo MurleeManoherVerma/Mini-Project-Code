@@ -1,0 +1,241 @@
+print("*" * 28 + "WELCOME USER" + "*" * 24 + "\n") 
+def phno():
+	Name=input("Enter Your Name : ")
+	Address=input("Enter Your Address : ")
+	PhoneNumber=input("Enter Your Phone Number : ")
+	if len(PhoneNumber)== 10:
+		def_main()
+	elif len(PhoneNumber)!=10:
+		print('please enter valid number ')
+		phno()
+	else :
+		print('phone number is invalid')
+		phno()
+
+
+
+def def_main():
+    while True:
+        print("*" * 28 + "WELCOME USER" + "*" * 24 + "\n") 
+        print("*" * 31 + "MAIN MENU" + "*" * 32 + "\n"     
+              "\t(O) ORDER\n"                              
+              "\t(E) EXIT\n" +
+              "_" * 72)
+
+        input_1 = str(input("Please Select Your Operation: ")).upper()    
+        if (len(input_1) == 1):                                           
+            if (input_1 == 'O'):                                          
+                print("\n" * 10)                                        
+                def_order_menu()                                          
+                break                                                                                                                                                             
+            elif (input_1 == 'E'):                                        
+                print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")           
+                break                                                     
+            else:                                                                                 
+                print("\n" * 10 + "ERROR: Invalid Input (" + str(input_1) + "). Try again!")     
+        else:                                                                                     
+            print("\n" * 10 + "ERROR: Invalid Input (" + str(input_1) + "). Try again!")
+
+def def_order_menu():                                                                               
+    while True:                                             
+        print("*" * 31 + "ORDER PAGE" + "*" * 31 + "\n"    
+              "\t(F) FOODS AND DRINKS\n"
+              "\t(M) MAIN MENU\n"
+              "\t(E) EXIT\n" +
+              "_" * 72)
+
+        input_1 = str(input("Please Select Your Operation: ")).upper() 
+        if len(input_1) == 1:
+            if (input_1 == 'F'):  
+                print("\n" * 10)
+                def_food_drink()
+                break
+            elif (input_1 == 'M'):
+                print("\n" * 10)
+                def_main() 
+                break
+            elif (input_1 == 'E'):
+                print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+                break
+            else:
+                print("\n" * 10 + "ERROR: Invalid Input (" + str(input_1) + "). Try again!") 
+        else:
+            print("\n" * 10 + "ERROR: Invalid Input (" + str(input_1) + "). Try again!")
+
+
+def def_food_drink():
+    while True:
+            print("*" * 26 + "ORDER FOODS & DRINKS" + "*" * 26)
+            print("-------------------------------------------------------------------------") 
+            print("                            Menu Card") 
+            print("-------------------------------------------------------------------------") 
+            print("\n BEVARAGES                              26 Dal Fry................ 140.00") 
+            print("----------------------------------      27 Dal Makhani............ 150.00") 
+            print(" 1  Regular Tea............. 20.00      28 Dal Tadka.............. 150.00") 
+            print(" 2  Masala Tea.............. 25.00") 
+            print(" 3  Coffee.................. 25.00      ROTI") 
+            print(" 4  Cold Drink.............. 25.00     ----------------------------------") 
+            print(" 5  Bread Butter............ 30.00      29 Plain Roti.............. 15.00") 
+            print(" 6  Bread Jam............... 30.00      30 Butter Roti............. 15.00") 
+            print(" 7  Veg. Sandwich........... 50.00      31 Tandoori Roti........... 20.00") 
+            print(" 8  Veg. Toast Sandwich..... 50.00      32 Butter Naan............. 20.00") 
+            print(" 9  Cheese Toast Sandwich... 70.00") 
+            print(" 10 Grilled Sandwich........ 70.00      RICE")  
+            print("                                       ----------------------------------") 
+            print(" SOUPS                                  33 Plain Rice.............. 90.00") 
+            print("----------------------------------      34 Jeera Rice.............. 90.00") 
+            print(" 11 Tomato Soup............ 110.00      35 Veg Pulao.............. 110.00") 
+            print(" 12 Hot & Sour............. 110.00      36 Peas Pulao............. 110.00") 
+            print(" 13 Veg. Noodle Soup....... 110.00") 
+            print(" |NO| |FOOD NAME|               |PRICE|")
+            print(" 14 Sweet Corn............. 110.00      SOUTH INDIAN") 
+            print(" 15 Veg. Munchow........... 110.00     ----------------------------------") 
+            print("                                        37 Plain Dosa............. 100.00") 
+            print(" MAIN COURSE                            38 Onion Dosa............. 110.00") 
+            print("----------------------------------      39 Masala Dosa............ 130.00") 
+            print(" 16 Shahi Paneer........... 110.00      40 Paneer Dosa............ 130.00") 
+            print(" 17 Kadai Paneer........... 110.00      41 Rice Idli.............. 130.00") 
+            print(" 18 Handi Paneer........... 120.00      42 Sambhar Vada........... 140.00") 
+            print(" 19 Palak Paneer........... 120.00") 
+            print(" 20 Chilli Paneer.......... 140.00      ICE CREAM") 
+            print(" 21 Matar Mushroom......... 140.00     ----------------------------------") 
+            print(" 22 Mix Veg................ 140.00      43 Vanilla................. 60.00") 
+            print(" 23 Jeera Aloo............. 140.00      44 Strawberry.............. 60.00") 
+            print(" 24 Malai Kofta............ 140.00      45 Pineapple............... 60.00") 
+            print(" 25 Aloo Matar............. 140.00      46 Butter Scotch........... 60.00") 
+            print("Press 0 -to end ")
+            Cost=0
+            ch=1
+            while(ch!='0'): 
+                  
+                ch=input("Select Your Food :  ")
+                
+                if ch=='1' or ch=='31' or ch=='32':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+20*Quan
+                elif ch>='a' and ch<='z':
+                    print("Invalid Choice!!")
+                    print("Please Enter A Number From 1 to 46")
+                    ot=int(input("Select Your Food : "))
+                elif ch<='4' and ch>='2':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+25*Quan 
+                elif ch<='6' and ch>='5':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+30*Quan
+                elif ch<='8' and ch>='7':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+50*Quan
+                elif ch<='10' and ch>='9':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+70*Quan 
+                elif (ch<='17' and ch>='11') or ch=='35' or ch=='36'  or ch=='38':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+110*Quan
+                elif ch<='19' and ch>='18':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+120*Quan
+                elif (ch<='25' and ch>='20') or ch=='42':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+140*Quan 
+                elif ch<='28' and ch>='27':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+150*Quan
+                elif ch<='30' and ch>='29':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+15*Quan
+                elif ch<='33' and ch>='34':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+90*Quan 
+                elif ch<='37':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+100*Quan
+                elif ch<='41' and ch>='39':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+130*Quan
+                elif ch<='46' or ch>='43':
+                    Quan=int(input("Number Of Quan : "))
+                    Cost=Cost+60*Quan
+                elif ch=='0':
+                    break
+                else:
+                    print("\n" * 10 + "ERROR: Invalid Input (" + str(ch) + "). Try again!")
+                    print("\n" * 10 + "ERROR: Invalid Input (" + str(Quan) + "). Try again!")
+                print("Total Bill",Cost)
+            
+            
+            
+            print()
+            print("Dilevery Charges Of Your Order Is Rs50")
+            if Cost!=0:
+                    TotalCost=Cost+50
+            elif Cost==0:
+                    TotalCost=Cost
+            else:
+                    pass
+                    
+            print(" You Want To Place Your Order Or Want To Go Back ?")
+            print("You Have To Pay",TotalCost)
+            print()
+            print()
+            Operation=input("Want To Place Order[Y/N] : ").upper()
+            if (Operation == 'Y'):
+                print("You Have Confirmed Your Order")
+                def_confirm1()
+                break
+            if (Operation == 'N'):
+                def_main()
+                break
+                        
+            
+def def_confirm1():
+    while True:
+            print("\n (M) MAIN MENU                   (P) PAYMENT" + "_" * 60)
+            input_1 = input("Please Select Your Operation: ").upper()
+            if (input_1 == 'M'):
+                print("\n" * 10)
+                def_main()
+                break
+            if (input_1 == 'P'):
+                 print("\n" * 10)
+                 def_payment() 
+                 break
+            else:
+                print("\n" * 10 + "ERROR: Invalid Input (" + str(input_1) + "). Try again!")
+    
+def def_payment():
+    while True:
+        print("\n (P) PAY           (M) MAIN MENU                    ")
+        input_1 = str(input("Please Select Your Operation: ")).upper()
+        if (input_1 == 'P'):
+            print("\n" * 10)
+            def_cash_on_delivery()
+            break
+        elif (input_1 == 'M'):
+            print("\n" * 10)
+            def_main()
+            break
+        else:
+              print("\n" * 10 + "ERROR: Invalid Input (" + str(input_1) + "). Try again!")
+            
+
+def def_cash_on_delivery():
+    while True:
+        print("" * 29 + "CASH ON DELIVERY" + "" * 29)
+        print("Thank You For Ordering")
+        print("Your Order Will Be Delivered Soon ")
+        print("\n  (M) MAIN MENU                     (E) EXIT\n" + "_" * 72)
+        input_1 = str(input("Please Select Your Operation: ")).upper()
+        if (input_1 == 'M'):
+            print("\n" * 10)
+            def_main()
+            break
+        elif ('E' in input_1) or ('e' in input_1):
+            print("*" * 32 + "THANK YOU" + "*" * 31 + "\n")
+            break
+
+
+            
+
+phno()      
+       
